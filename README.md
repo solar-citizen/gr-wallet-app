@@ -4,7 +4,7 @@
 # In the desired folder:
 git clone https://github.com/solar-citizen/gr-wallet-app.git
 
-cd dt-recipe-book-webapp
+cd gr-wallet-app
 npm i
 ```
 
