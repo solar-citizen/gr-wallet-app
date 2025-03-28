@@ -1,0 +1,154 @@
+{
+  "cardLimit": 1500,
+  "cardBalance": 17.3,
+  "dailyPoints": 0,
+  "transactions": [
+    {
+      "id": "1",
+      "type": "Credit",
+      "amount": 14.06,
+      "name": "Apple",
+      "description": "Apple Store Purchase",
+      "date": "2025-03-27T10:30:00Z",
+      "status": "Pending",
+      "authorizedUser": "Diana",
+      "icon": "apple",
+      "category": "Electronics"
+    },
+    {
+      "id": "2",
+      "type": "Payment",
+      "amount": 99.71,
+      "name": "JPMorgan Chase Bank",
+      "description": "Bank Transfer",
+      "date": "2025-03-26T15:45:00Z",
+      "status": "Approved",
+      "authorizedUser": "Diana"
+    },
+    {
+      "id": "3",
+      "type": "Credit",
+      "amount": 21.61,
+      "name": "IKEA",
+      "description": "IKEA Purchase in Round Rock, TX",
+      "date": "2025-03-25T11:20:00Z",
+      "status": "Approved",
+      "category": "Furniture"
+    },
+    {
+      "id": "4",
+      "type": "Payment",
+      "amount": 73.58,
+      "name": "Target",
+      "description": "Cashback",
+      "date": "2024-03-24T09:15:00Z",
+      "status": "Approved"
+    },
+    {
+      "id": "5",
+      "type": "Payment",
+      "amount": 47.89,
+      "name": "Amazon Pay",
+      "description": "Purchase via Amazon Pay",
+      "date": "2025-03-28T08:15:00Z",
+      "status": "Approved",
+      "authorizedUser": "Diana",
+      "icon": "amazon-pay",
+      "category": "Online Retail"
+    },
+    {
+      "id": "6",
+      "type": "Credit",
+      "amount": 130.0,
+      "name": "Air bnb",
+      "description": "Short-term rental booking",
+      "date": "2025-03-22T18:00:00Z",
+      "status": "Approved",
+      "icon": "air-bnb",
+      "category": "Travel"
+    },
+    {
+      "id": "7",
+      "type": "Payment",
+      "amount": 20.0,
+      "name": "Ali pay",
+      "description": "Online payment to vendor",
+      "date": "2025-03-21T14:10:00Z",
+      "status": "Pending",
+      "icon": "ali-pay",
+      "category": "Online Payment"
+    },
+    {
+      "id": "8",
+      "type": "Credit",
+      "amount": 15.99,
+      "name": "Netflix",
+      "description": "Monthly subscription fee",
+      "date": "2025-03-20T10:00:00Z",
+      "status": "Approved",
+      "category": "Entertainment"
+    },
+    {
+      "id": "9",
+      "type": "Credit",
+      "amount": 9.75,
+      "name": "Spotify",
+      "description": "Music subscription",
+      "date": "2025-03-19T09:30:00Z",
+      "status": "Approved",
+      "authorizedUser": "Diana",
+      "category": "Entertainment"
+    },
+    {
+      "id": "10",
+      "type": "Credit",
+      "amount": 6.45,
+      "name": "Starbucks",
+      "description": "Coffee purchase",
+      "date": "2025-03-18T07:25:00Z",
+      "status": "Approved",
+      "category": "Food & Beverage"
+    },
+    {
+      "id": "11",
+      "type": "Payment",
+      "amount": 82.3,
+      "name": "Walmart",
+      "description": "Grocery and household items",
+      "date": "2025-03-17T16:40:00Z",
+      "status": "Pending",
+      "category": "Retail"
+    },
+    {
+      "id": "12",
+      "type": "Credit",
+      "amount": 11.99,
+      "name": "Zoom",
+      "description": "Monthly pro plan",
+      "date": "2025-03-16T12:00:00Z",
+      "status": "Approved",
+      "category": "Software"
+    },
+    {
+      "id": "13",
+      "type": "Payment",
+      "amount": 199.99,
+      "name": "Tesla",
+      "description": "Supercharger station usage",
+      "date": "2025-03-15T09:00:00Z",
+      "status": "Approved",
+      "icon": "",
+      "category": "Automotive"
+    },
+    {
+      "id": "14",
+      "type": "Credit",
+      "amount": 55.5,
+      "name": "Microsoft",
+      "description": "Office 365 subscription",
+      "date": "2025-03-14T11:45:00Z",
+      "status": "Approved",
+      "category": "Software"
+    }
+  ]
+}

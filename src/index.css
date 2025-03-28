@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+:root {
+  @apply text-gray-700 bg-gray-100;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
