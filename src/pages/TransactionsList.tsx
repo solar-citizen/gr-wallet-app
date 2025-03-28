@@ -1,11 +1,9 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 
-import { Icon, type IconName } from '@/src/components/atoms'
-import { formatPoints, formatTransactionDate, routes } from '@/src/lib'
+import { Icon } from '@/src/components/atoms'
+import { TransactionListItem } from '@/src/components/molecules'
+import { formatPoints, formatTransactionDate } from '@/src/lib'
 import { useWalletStore } from '@/src/store'
-
-const { transactionDetail } = routes
 
 const TransactionsList = () => {
   const walletData = useWalletStore(state => state.walletData)
@@ -66,57 +64,26 @@ const TransactionsList = () => {
           <h2 className='text-lg font-bold mb-2'>Latest Transactions</h2>
           <div className='bg-white shadow-md rounded-lg'>
             <ul className='divide-y divide-gray-200'>
-              {transactions
-                .slice(0, 10)
-                .map(({ id, type, status, icon, amount, date, description, name, authorizedUser }) => {
-                  const displayDate = formatTransactionDate(date)
-                  const isPayment = type === 'Payment'
-                  const isPending = status === 'Pending'
+              {transactions.slice(0, 10).map(transaction => {
+                const displayDate = formatTransactionDate(transaction.date)
+                const isPayment = transaction.type === 'Payment'
+                const isPending = transaction.status === 'Pending'
 
-                  return (
-                    <li key={id}>
-                      {/* Wrap each item in a Link to the detail page */}
-                      <Link
-                        to={`${transactionDetail}/${id}`}
-                        className='flex items-start justify-between p-4 hover:bg-gray-50'
-                      >
-                        {/* Left side: Icon + info */}
-                        <div className='flex items-start space-x-3'>
-                          {/* Icon in a subtle circle */}
-                          <div className='bg-gray-600 rounded-md h-12 w-12 flex justify-center items-center'>
-                            <Icon
-                              name={(icon || (isPayment ? 'wallet' : 'credit-card')) as IconName}
-                              size='xl'
-                              color='primary'
-                            />
-                          </div>
-
-                          <div className='flex flex-col text-sm'>
-                            <span className='font-semibold'>{isPayment ? 'Payment' : name}</span>
-                            {/* If pending, add "Pending" before description */}
-                            <span className='text-gray-500'>
-                              {isPending ? 'Pending ' : ''}
-                              {isPayment ? `From ${name}` : description}
-                            </span>
-                            {/* If there's an authorized user, show them before the date */}
-                            <span className='text-gray-500'>
-                              {authorizedUser ? `${authorizedUser} - ` : ''}
-                              {displayDate}
-                            </span>
-                          </div>
-                        </div>
-
-                        {/* Right side: Type + Amount */}
-                        <div className='flex flex-col items-end text-right'>
-                          <span className={`text-sm ${isPayment ? 'text-green-600' : ''} font-semibold`}>
-                            {isPayment && '+'}${amount.toFixed(2)}
-                          </span>
-                          <span className='text-xs text-gray-400'>{isPayment ? 'Payment' : 'Credit'}</span>
-                        </div>
-                      </Link>
-                    </li>
-                  )
-                })}
+                return (
+                  <TransactionListItem
+                    key={transaction.id}
+                    id={transaction.id}
+                    icon={transaction.icon}
+                    isPayment={isPayment}
+                    isPending={isPending}
+                    name={transaction.name}
+                    description={transaction.description}
+                    authorizedUser={transaction.authorizedUser}
+                    displayDate={displayDate}
+                    amount={transaction.amount}
+                  />
+                )
+              })}
             </ul>
           </div>
         </div>
